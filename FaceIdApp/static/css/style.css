@@ -1,0 +1,152 @@
+:root {
+    --text: #100F0F;
+    --lightText: #F1F1F1;
+    --background: #E2DCC8;
+    --nav: #0F3D3E;
+}
+
+h1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+input {
+    font-size: 20px;
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 3em;
+    margin-right: 10em;
+    margin-left: 10em;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    text-align: center;
+    color: var(--text);
+}
+
+#imgBox {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#img1 {
+    width: 50%;
+    display:grid;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    justify-content: right;
+}
+
+#img1ctrl {
+    display:inline-block;
+}
+
+#blah {
+    text-align: center;
+    display: none;
+}
+
+#img2 {
+    width: 50%;
+    display:grid;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+#img2ctrl {
+    display: inline-block;
+}
+
+#blah2 {
+    text-align: center;
+    display: none;
+}
+
+#btn {
+    float: center;
+    margin: 1em;
+}
+
+#prediction {
+    font-weight: bold;
+}
+
+#headerDiv {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#modelDiv {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#aboutDiv {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: var(--nav);
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: #F1F1F1;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.25em;
+    display: block;
+    text-align: center;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+    background: var(--nav);
+    display: block;
+    position: absolute;
+    font-size: 1.40em;
+    right: 0;
+    top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: #a9aaaa;
+    color: white;
+}
