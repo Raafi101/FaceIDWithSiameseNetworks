@@ -1,0 +1,67 @@
+<script src="/static/script/script.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div id="navbar" class="topnav">
+  <a id="navText" href="http://127.0.0.1:5000/">FaceID</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a id="navText" href="https://www.raafirahman.com/" target="_blank">My Portfolio</a>
+    <a id="navText" href="https://github.com/Raafi101" target="_blank">GitHub</a>
+    <a id="navText" href="https://www.linkedin.com/in/raafi101/" target="_blank">LinkedIn</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<head>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<main>
+
+    <div id="headerDiv">
+        <h1 id="title">FaceID</h1>
+        <p id="author">By Raafi Rahman</p>
+    </div>
+
+    <div id="modelDiv">
+        <h1 id="body">Try it out!</h1>
+        <p>Select both of your images below.</p>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div id="imgBox">
+                <div id="img1">
+                        <div id="img1ctrl">
+                            <label>Choose image 1:</label>
+                            <input id="inpt" accept=".png, .jpg, .jpeg" type="file" id="img1" name="img1" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0]); showImage('blah')" required>
+                        </div>
+                    <img id="blah" alt="your image" width="200" height="200" />
+                </div>
+                
+                <div id="img2">
+                        <div id="img2ctrl">
+                            <label>Choose image 2:</label>
+                            <input id="inpt" accept=".png, .jpg, .jpeg" type="file" id="img2" name="img2" onchange="document.getElementById('blah2').src = window.URL.createObjectURL(this.files[0]); showImage('blah2')" required>
+                        </div>
+                    <img id="blah2" alt="your image" width="200" height="200" />
+                </div>
+            </div>
+
+            <input id="btn" type="submit">
+        </form>
+
+        <h2 id="prediction">Prediction: {{ prediction }}</h2>
+    </div>
+
+    <div id="aboutDiv">
+        <h1 id="about">About</h1>
+        <p>This program uses a Siamese Neural Network to predict whether the people in two images are the same person or different people.
+            The model will output "Match" if it predicts they are the same person and "No Match" if it predicts they are different people.
+        </p>
+    </div>
+
+</main>
